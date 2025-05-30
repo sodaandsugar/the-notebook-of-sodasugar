@@ -77,8 +77,10 @@
 ### 2. 2 DNF 和 CNF
 * 析取范式DNF（Disjunctive Normal Form）
   * $A' ≡ A$ ，$A'$ 为合取子句或者若干合取子句的析取
+  * $P ∧ Q$ 或 $(P_1 ∧ Q_1)∨(P_2 ∧ Q_2)$
 * 合取范式CNF（Conjunctive Normal Form）
   * $A' ≡ A$ ，$A'$ 为析取子句或者若干析取子句的合取
+  * $P ∨ Q$ 或 $(P_1 ∨ Q_1)∧(P_2 ∨ Q_2)$
 * 求范式的一般步骤
   * 消去公式中的联结词 $→$ 和 $↔$
     * 蕴涵等值式：$p → q$ 化为 $¬p ∨ q$
