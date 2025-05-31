@@ -27,7 +27,7 @@
    * 并运算（Union）：$∪$
    * 交运算（Intersection）：$∩$
    * 差运算（Difference）：$−$
-   * 补运算（Complement）：$ \sim $
+   * 补运算（Complement）：$\sim$
 2. 基本性质
    * 交和并运算性质
      * 交换律
@@ -42,8 +42,8 @@
    * 差和补运算性质
      * $A − (B ∪ C) = (A − B) ∩ (A − C)$
      * $A − (B ∩ C) = (A − B) ∪ (A − C)$
-     * $ \sim (A ∪ B) = \sim A \,\,∩ \sim B$
-     * $ \sim  (A ∩ B) = \sim A \,\,∪ \sim B$
+     * $\sim (A ∪ B) = \sim A \,\,∩ \sim B$
+     * $\sim  (A ∩ B) = \sim A \,\,∪ \sim B$
      * $A − B = A \,\,∩ \sim B$
 ### 2. 2 幂集（power set）运算
 * 对于任意集合 $A$，$\rho(A)$称作 $A$ 的幂集，定义为 $\rho (A) = \{x｜x ⊆ A\}$
