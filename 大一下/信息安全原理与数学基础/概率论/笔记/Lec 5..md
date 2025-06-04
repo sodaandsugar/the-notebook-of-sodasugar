@@ -170,4 +170,41 @@ $$F_{\boldsymbol{Y}}(\boldsymbol{y}) = F_{\boldsymbol{X}}\left( \frac{y_1 - b}{a
 > 
 > $\therefore (R_X(\tau))^2=\left( C_X(t, \tau) + \mu_X^2 \right)^2 \leq \left( C_X(0) + \mu_X^2 \right)^2=(R_X(0))^2$
 
-## 7 互相关（Cross-Correlation）
+### 6. 2 互相关（Cross-Correlation）
+* 连续时间随机过程 $X(t)$ 和 $Y(t)$ 的互相关函数为：
+  * $R_{XY}(t, \tau) = \mathrm{E}\left[ X(t)Y(t + \tau) \right]$
+* 随机序列 $X_n$ 和 $Y_n$ 的互相关函数为：
+  * $R_{XY}[m, k] = \mathrm{E}\left[ X_m Y_{m + k} \right]$
+* 联合广义平稳的连续时间随机过程
+  * 定义：$X(t)$ 和 $Y(t)$ 各自均为广义平稳过程，且它们的互相关函数仅依赖于两个随机变量间的时间差，即：$R_{XY}(t, \tau) = R_{XY}(\tau)$
+  * 性质：$R_{XY}(\tau) = R_{YX}(-\tau)$
+* 联合广义平稳的随机序列
+  * 定义：$X_n$ 和 $Y_n$ 各自均为广义平稳序列，且它们的互相关函数仅依赖于两个随机变量间的索引差，即：$R_{XY}[m, k] = R_{XY}[k]$ 
+  * 性质：$R_{XY}[k] = R_{YX}[-k]$
+> **证明**
+> 
+> $R_{XY}(\tau) = \mathrm{E}[X(u - \tau)Y(u)] = \mathrm{E}[Y(u)X(u - \tau)] = R_{YX}(u, -\tau)= R_{YX}(-\tau)$
+
+## 7 高斯过程（Gaussian Process）
+* 高斯随机过程
+  * 定义：对于任意整数 $k>0$ 以及任意一组时刻 $t_1,t_2,\dots,t_k$，向量 $\mathbf{X} = \left[ X(t_1) \ \cdots \ X(t_k) \right]'$ 是高斯随机向量
+  * 若 $X(t)$ 是广义平稳高斯过程，那么 $X(t)$ 是平稳高斯过程
+* 高斯随机序列
+  * 定义：对于任意整数 $k>0$ 以及任意一组时刻 $n_1,n_2,\dots,n_k$，向量 $\mathbf{X} = \left[ X_{n_1} \ \cdots \ X_{n_k} \right]'$ 是高斯随机向量
+  * 若 $X_n$ 是广义平稳高斯序列，那么 $X_n$ 是平稳高斯序列
+> **证明**
+>
+> 设 $\boldsymbol{\mu}$ 和 $\mathbf{C}$ 分别表示随机向量 $\mathbf{X} = \left[ X(t_1) \ \cdots \ X(t_k) \right]'$ 的期望值向量和协方差矩阵
+> 
+> 设 $\boldsymbol{\bar{\mu}}$ 和 $\mathbf{\bar{C}}$ 表示时移后的随机向量 $\mathbf{\bar{X}} = \left[ X(t_1 + T) \ \cdots \ X(t_k + T) \right]'$ 对应的期望值向量和协方差矩阵  
+> 
+> $\because X(t)$ 是广义平稳的，$\therefore \mathrm{E}[X(t_i)] = \mathrm{E}[X(t_i + T)] = \mu_X$
+> 
+> $\therefore C_{ij} = C_X(t_i, t_j) = C_X(t_j - t_i) = C_X(t_j + T - (t_i + T)) = C_X(t_i + T, t_j + T) = \bar{C}_{ij}$ 
+> 
+> $\therefore \boldsymbol{\mu} = \boldsymbol{\bar{\mu}}$ 且 $\mathbf{C} = \mathbf{\bar{C}}$，$\therefore f_{\mathbf{X}}(\mathbf{x}) = f_{\mathbf{\bar{X}}}(\mathbf{x})$
+> 
+> $\therefore X(t)$ 是平稳过程，同样的推理适用于高斯随机序列 $X_n$
+
+* 白高斯噪声过程（White Gaussian Noise）
+  * 定义：$W(t)$ 是平稳高斯随机过程，且满足 $\mu_W = 0$ ，$R_W(\tau) = \eta_0 \delta(\tau)$ ，其中 $\delta(\tau)$
